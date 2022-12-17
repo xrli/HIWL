@@ -52,8 +52,8 @@ train_vit.py
 1. Selecting cleandata
 2. training new model from scheme or noscheme
   ```shell
-  select cleandata.py
-  train_efficientnet.py
+  python select cleandata.py
+  python train_efficientnet.py
   ```
 
 ### Citation
