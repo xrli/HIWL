@@ -1,4 +1,4 @@
-# LASSO-MLP for stellar atmospheric parameters estimation
+# Galaxy Image Classification
 
 This repo contains the code for our paper *Galaxy Image Classification using Hierarchical Data Learning with Weighted Sampling and Label Smoothing*.
 
@@ -10,25 +10,38 @@ This repo contains the code for our paper *Galaxy Image Classification using Hie
 - torch>=1.7.1
 - torchvision>=0.8.2
 
-
-
-
 ### Select cleandata
 
--Select clean data from the original data downloaded from /url:https://www.kaggle.com/competitions/1273 galaxy-zoo-the-galaxy-challenge/data.
+- Selecting clean data from the original data downloaded from https://www.kaggle.com/competitions/galaxy-zoo-the-galaxy-challenge/data.
 ```
 select cleandata.py
 ```
 
--training label and test label：
+### Noscheme
+- Training the models without HIWL
 ```
-LAMOST_APOGEE.csv
+train_dieleman.py
+train_vgg.py
+train_googlenet.py
+train_resnet26.py
+train_resnet.py
+train_efficientnet.py
+train_vit.py
+
 ```
 
 
--estimation catalog
+### Scheme
+- Training the models with HIWL
 ```
-LASSO-MLP.csv
+train_dieleman.py
+train_vgg.py
+train_googlenet.py
+train_resnet26.py
+train_resnet.py
+train_efficientnet.py
+train_vit.py
+
 ```
 
 
@@ -36,9 +49,11 @@ LASSO-MLP.csv
 ### Usage
 
 - Training a new model:
-
+1. Selecting cleandata
+2. training new model from scheme or noscheme
   ```shell
-  Jupyter Notebook LASSO_MLP.ipynb
+  select cleandata.py
+  train_efficientnet.py
   ```
 
 ### Citation
